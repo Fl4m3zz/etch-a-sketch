@@ -1,0 +1,15 @@
+.grid-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: 50%;
+	height: 300px;
+	border: solid black;
+}
+
+#align {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
