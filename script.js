@@ -15,10 +15,16 @@ function createGrid(size) {
 	return grid;
 }
 
+function drawGrid(gridSize) {
+	gridContainer = document.querySelector(".grid-container");
+	grid = createGrid(gridSize);
 
-gridContainer = document.querySelector(".grid-container");
-grid = createGrid(gridSize);
+	grid.flat().forEach((gridCell) => {
+		gridContainer.appendChild(gridCell);
+	});
+}
 
-grid.flat().forEach((gridCell) => {
-	gridContainer.appendChild(gridCell);
-});
+let gridSize = 100;
+
+	
+drawGrid(gridSize);

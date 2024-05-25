@@ -8,10 +8,12 @@
 	height: 500px;
 	border: solid black;
 	padding: 0px;
+	margin: 24px;
 }
 
 #align {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: center
 }
