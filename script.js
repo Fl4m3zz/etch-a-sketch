@@ -39,7 +39,7 @@ function drawGrid(gridSize) {
 	});
 }
 
-let gridSize = 100;
+let gridSize = 64;
 
 let gridSizeButton = document.querySelector(".size-input > #submit-grid-size");
 let gridSizeText = document.querySelector(".size-input > #grid-size");
