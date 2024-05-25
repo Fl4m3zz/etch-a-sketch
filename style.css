@@ -1,11 +1,13 @@
 .grid-container {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	align-content: flex-start;
-	width: 50%;
-	height: 300px;
+	width: 500px;
+	height: 500px;
 	border: solid black;
+	padding: 0px;
 }
 
 #align {
