@@ -15,8 +15,16 @@ function createGrid(size) {
 	return grid;
 }
 
+function clearGrid(gridContainer) {
+	gridCells = document.querySelectorAll(".grid-container > *");
+	gridCells.forEach((gridCell) => {
+		gridContainer.removeChild(gridCell);
+	});
+}
+
 function drawGrid(gridSize) {
 	gridContainer = document.querySelector(".grid-container");
+	clearGrid(gridContainer);
 	grid = createGrid(gridSize);
 
 	grid.flat().forEach((gridCell) => {
@@ -26,5 +34,21 @@ function drawGrid(gridSize) {
 
 let gridSize = 100;
 
+let gridSizeButton = document.querySelector(".size-input > #submit-grid-size");
+let gridSizeText = document.querySelector(".size-input > #grid-size");
+
+gridSizeButton.addEventListener("click", (e) => {
+	try {
+		gridSize = parseInt(gridSizeText.value);
+		if (isNaN(gridSize)) {
+			throw new Error("Not a number!");
+		} else {
+			drawGrid(gridSize);
+		}
+	} catch (err) {
+		alert(err);
+	}
+	gridSizeText.value = "";
+});
 	
 drawGrid(gridSize);
