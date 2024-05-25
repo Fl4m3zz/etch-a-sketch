@@ -7,7 +7,14 @@ function createGrid(size) {
 			gridCell.style.width = `${100/size}%`;
 			gridCell.style.height = `${100/size}%`;
 			gridCell.addEventListener("mouseover", (e) => {
-				e.target.style.backgroundColor = "black";	
+				if (e.target.style.backgroundColor == "") {
+					e.target.style.backgroundColor = "black";
+					e.target.style.opacity = "10%";
+				}
+				opacity = parseFloat(e.target.style.opacity);
+				if (opacity != 1) {
+					e.target.style.opacity = `${opacity + 0.1}`;
+				}
 			});
 			grid[i].push(gridCell);
 		}
